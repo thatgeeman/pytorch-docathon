@@ -1,4 +1,4 @@
-(\_torch-library-docs)=
+(torch-library-docs)=
 
 # torch.library
 
@@ -39,7 +39,7 @@ Use {py:func}`torch.library.custom_op` to create new custom ops.
 
 ## Extending custom ops (created from Python or C++)
 
-Use the register.\* methods, such as {py:func}`torch.library.register_kernel` and
+Use the `register.*` methods, such as {py:func}`torch.library.register_kernel` and
 {py:func}`torch.library.register_fake`, to add implementations
 for any operators (they may have been created using {py:func}`torch.library.custom_op` or
 via PyTorch's C++ operator registration APIs).
