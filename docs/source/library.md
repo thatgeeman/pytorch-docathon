@@ -18,9 +18,9 @@ for more details on how to effectively use these APIs.
 
 ## Testing custom ops
 
-Use {py:func}`torch.library.opcheck` to test custom ops for incorrect usage of the
+Use {func}`torch.library.opcheck` to test custom ops for incorrect usage of the
 Python torch.library and/or C++ TORCH_LIBRARY APIs. Also, if your operator supports
-training, use {py:func}`torch.autograd.gradcheck` to test that the gradients are
+training, use {func}`torch.autograd.gradcheck` to test that the gradients are
 mathematically correct.
 
 ```{eval-rst}
@@ -29,7 +29,7 @@ mathematically correct.
 
 ## Creating new custom ops in Python
 
-Use {py:func}`torch.library.custom_op` to create new custom ops.
+Use {func}}`torch.library.custom_op` to create new custom ops.
 
 ```{eval-rst}
 .. autofunction:: custom_op
@@ -39,9 +39,9 @@ Use {py:func}`torch.library.custom_op` to create new custom ops.
 
 ## Extending custom ops (created from Python or C++)
 
-Use the `register.*` methods, such as {py:func}`torch.library.register_kernel` and
-{py:func}`torch.library.register_fake`, to add implementations
-for any operators (they may have been created using {py:func}`torch.library.custom_op` or
+Use the `register.*` methods, such as {func}`torch.library.register_kernel` and
+{func}`torch.library.register_fake`, to add implementations
+for any operators (they may have been created using {func}`torch.library.custom_op` or
 via PyTorch's C++ operator registration APIs).
 
 ```{eval-rst}
@@ -55,7 +55,6 @@ via PyTorch's C++ operator registration APIs).
 .. autofunction:: register_torch_dispatch
 .. autofunction:: infer_schema
 .. autoclass:: torch._library.custom_ops.CustomOpDef
-
     .. automethod:: set_kernel_enabled
 ```
 
@@ -73,7 +72,10 @@ A tutorial that walks you through some examples on how to use this API is availa
 ```{eval-rst}
 .. autoclass:: torch.library.Library
   :members:
+
 .. autofunction:: fallthrough_kernel
+
 .. autofunction:: define
+
 .. autofunction:: impl
 ```
