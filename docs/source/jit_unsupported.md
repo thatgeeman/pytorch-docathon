@@ -1,4 +1,4 @@
-(jit-unsupported)=
+(jit_unsupported)=
 
 # TorchScript Unsupported PyTorch Constructs
 
